@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+// page/_app.js
+import Head from "next/head";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import { GlobalStyles } from "twin.macro";
 
-export default MyApp
+const App = ({ Component, pageProps }) => (
+  <div>
+    <GlobalStyles />
+    <Head>
+      <title>Autoilevan ihmisen tavaratalo | Motonet Oy</title>
+      <link rel="icon" href="/arvo6.svg" />
+    </Head>
+    <Component {...pageProps} />
+  </div>
+);
+
+export default App;
