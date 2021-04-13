@@ -1,37 +1,78 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import tw, { css } from "twin.macro";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
-
+import { memoizedMenu as MegaMenu } from "./MegaMenu";
 import { menuList, navCategories } from "../../data";
 
-const stylesList = ({ selected }) => [
-  tw`flex justify-center absolute top-136px p-0 left-0 right-0 max-h-0  bg-white overflow-hidden`,
-  selected &&
-    tw` max-h-100vh p-3 border-l border-b border-r border-black z-10 cursor-default transition-maxHeight duration-300`,
-];
 const stylesNavBar = ({ selected, first }) => [
   tw`flex items-center text-white text-xs font-semibold uppercase px-3 border-r border-gray-400 hover:bg-white hover:text-gray-800  cursor-pointer`,
   selected && tw`bg-white text-gray-800`,
   first && tw`border-l`,
 ];
+
 export default function NavBar() {
   const [selected, setSelected] = useState(null);
-  const [open, setOpen] = useState(false);
   const handleSelect = (num) => {
     setSelected(num);
-    setOpen(true);
   };
-  const handleUnselect = (num) => {
+  const handleUnselect = () => {
     setSelected(null);
-    setOpen(false);
   };
-  console.log("IN the navbar");
+  console.log("in NAVBAR");
   return (
     <>
       <nav tw="flex bg-gray-800 h-7 justify-center">
-        {navCategories.map((category, idx, arr) => {
+        <div css={stylesNavBar({ first: true })}>{navCategories[0]}</div>
+        <MegaMenu
+          category={navCategories[1]}
+          handleSelect={handleSelect}
+          handleUnselect={handleUnselect}
+          idx={1}
+          menuList={menuList}
+          selected={selected}
+        />
+        <MegaMenu
+          category={navCategories[2]}
+          handleSelect={handleSelect}
+          handleUnselect={handleUnselect}
+          idx={2}
+          menuList={menuList}
+          selected={selected}
+        />
+        <MegaMenu
+          category={navCategories[3]}
+          handleSelect={handleSelect}
+          handleUnselect={handleUnselect}
+          idx={3}
+          menuList={menuList}
+          selected={selected}
+        />
+        <MegaMenu
+          category={navCategories[4]}
+          handleSelect={handleSelect}
+          handleUnselect={handleUnselect}
+          idx={4}
+          menuList={menuList}
+          selected={selected}
+        />
+        <MegaMenu
+          category={navCategories[5]}
+          handleSelect={handleSelect}
+          handleUnselect={handleUnselect}
+          idx={5}
+          menuList={menuList}
+          selected={selected}
+        />
+        <MegaMenu
+          category={navCategories[6]}
+          handleSelect={handleSelect}
+          handleUnselect={handleUnselect}
+          idx={6}
+          menuList={menuList}
+          selected={selected}
+        />
+        <div css={stylesNavBar({})}>{navCategories[7]}</div>
+        {/* {navCategories.map((category, idx, arr) => {
           if (idx === 0) {
             return (
               <div key={idx} css={stylesNavBar({ first: true })}>
@@ -46,54 +87,18 @@ export default function NavBar() {
             );
           } else {
             return (
-              <div
+              <MegaMenu
                 key={idx}
-                css={stylesNavBar({ selected: selected === idx })}
-                onClick={() => handleSelect(idx)}
-                onMouseLeave={() => handleUnselect(idx)}
-              >
-                {category}
-                <div css={stylesList({ selected: selected === idx })}>
-                  {menuList[idx].map((el, menuIdx) => {
-                    return (
-                      <div key={menuIdx} tw="w-56 flex flex-col">
-                        <div
-                          key={menuIdx}
-                          tw="text-gray-navText text-xs font-semibold capitalize my-1"
-                        >
-                          <span tw="hover:underline cursor-pointer">
-                            {el.title}
-                          </span>
-                        </div>
-                        <ul tw="flex-grow">
-                          {el.list.map((item, itemIdx) => (
-                            <li
-                              key={itemIdx}
-                              tw="text-gray-navText text-xs font-normal capitalize my-0.5"
-                            >
-                              <span tw=" hover:underline cursor-pointer">
-                                {item}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                        <div tw="font-bold normal-case">
-                          <span tw="flex items-center cursor-pointer">
-                            Katso kaikki
-                            <FontAwesomeIcon
-                              icon={faAngleDoubleRight}
-                              tw="inline-block text-black h-3 w-3 ml-1"
-                            ></FontAwesomeIcon>
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+                category={category}
+                handleSelect={handleSelect}
+                handleUnselect={handleUnselect}
+                idx={idx}
+                menuList={menuList}
+                selected={selected}
+              />
             );
           }
-        })}
+        })} */}
       </nav>
     </>
   );

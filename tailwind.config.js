@@ -11,9 +11,13 @@ module.exports = {
         },
         red: {
           primary: "#d4041b",
+          secondary: "#d0301f",
         },
         blue: {
           korona: "#1668b1",
+        },
+        green: {
+          button: "#3e9245",
         },
       },
       spacing: {

@@ -26,7 +26,7 @@ export default function Header() {
           <input
             type="text"
             name="company_website"
-            tw="focus:outline-none  block rounded-none rounded-r-md sm:text-sm border-gray-300 px-3 w-112"
+            tw="focus:outline-none  block rounded-none rounded-r-sm sm:text-sm border-gray-300 px-3 w-112"
             placeholder="Löydä yli 150 000 tuotteen valikoimasta"
           />
         </div>

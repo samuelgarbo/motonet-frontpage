@@ -1,5 +1,4 @@
-import faker, { random } from "faker";
-import { list } from "postcss";
+import faker from "faker";
 
 export const footerData = [
   [
@@ -100,6 +99,7 @@ export const footerImageText = [
   { text: ["kanta-asiakkaille", "etuja ja tarjouksia"], image: "/arvo6.svg" },
 ];
 export const navCategories = [
+  "varaosat",
   "autoilu",
   "työkalut & rakentaminen",
   "mp & pyöräily",
