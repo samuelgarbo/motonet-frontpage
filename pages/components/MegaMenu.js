@@ -5,40 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
 const stylesList = ({ selected }) => [
-  tw`flex justify-center absolute top-136px p-0 left-0 right-0 max-h-0 cursor-default bg-white overflow-hidden z-10`,
-  selected && tw` max-h-100vh p-3 border-l border-b border-r border-black `,
-];
-const stylesNavBar = ({ selected, first }) => [
-  tw`flex items-center text-white text-xs font-semibold uppercase px-3 border-r border-gray-400 hover:bg-white hover:text-gray-800  cursor-pointer`,
-  selected && tw`bg-white text-gray-800`,
-  first && tw`border-l`,
+  tw`flex justify-center absolute top-136px p-0 left-0 right-0 max-h-0 cursor-default bg-white overflow-hidden z-10 transition-maxHeight ease-linear duration-500`,
+  selected && tw` max-h-100vh p-3 border-l border-b border-r border-black`,
 ];
 
-function MegaMenu({
-  category,
-  handleSelect,
-  handleUnselect,
-  idx,
-  menuList,
-  selected,
-}) {
-  const handleClick = () => {
-    handleSelect(idx);
-  };
-  const handleMouseLeave = () => {
-    handleUnselect();
-  };
-  console.log("IN MEGAMENU");
+function MegaMenu({ menuList, selected }) {
+  let open = /\d/.test(selected);
   return (
-    <div
-      key={idx}
-      css={stylesNavBar({ selected: selected === idx })}
-      onMouseEnter={handleClick}
-      onMouseLeave={handleMouseLeave}
-    >
-      {category}
-      <div css={stylesList({ selected: selected === idx })}>
-        {menuList[idx].map((el, menuIdx) => {
+    <div css={stylesList({ selected: open })}>
+      {selected &&
+        menuList[selected].map((el, menuIdx) => {
           return (
             <div key={menuIdx} tw="w-48 flex flex-col">
               <div
@@ -57,7 +33,7 @@ function MegaMenu({
                   </li>
                 ))}
               </ul>
-              <div tw="font-bold normal-case">
+              <div tw="font-bold normal-case text-xs mt-2">
                 <span tw="flex items-center cursor-pointer">
                   Katso kaikki
                   <FontAwesomeIcon
@@ -69,8 +45,7 @@ function MegaMenu({
             </div>
           );
         })}
-      </div>
     </div>
   );
 }
-export const memoizedMenu = React.memo(MegaMenu);
+export default MegaMenu;
