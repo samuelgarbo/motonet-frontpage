@@ -7,7 +7,7 @@ function CategoryNav({ data }) {
   const [openChild, setOpenChild] = useState(null);
   return (
     <div tw="p-2 shadow-inner">
-      <div tw="py-1 mb-3 bg-red-primary text-xs uppercase text-white font-semibold text-center rounded-sm">
+      <div tw="py-1 mb-3 bg-red-primary text-xs uppercase text-white font-bold text-center rounded-sm">
         valitse tuoteryhmä
       </div>
       <ul>

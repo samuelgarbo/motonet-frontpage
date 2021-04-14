@@ -15,7 +15,7 @@ const stylesSubItems = ({ open }) => [
   open && tw`max-h-screen`,
 ];
 const stylesContent = ({ open, main }) => [
-  tw`flex-grow`,
+  tw`flex-grow transition-colors`,
   main && tw`hover:text-red-secondary`,
   main && open && tw`hover:text-black`,
 ];
@@ -41,13 +41,13 @@ function Item({ node, main, indentation, openChildState, setOpenChildState }) {
           (node.id === openChildState ? (
             <FontAwesomeIcon
               icon={faMinus}
-              tw="h-3 w-3 hover:transform hover:scale-150 "
+              tw="h-3.5 w-3.5 hover:transform hover:scale-150 transition-transform "
               onClick={handleClose}
             />
           ) : (
             <FontAwesomeIcon
               icon={faPlus}
-              tw="h-3 w-3 hover:transform hover:scale-150 "
+              tw="h-3.5 w-3.5 hover:transform hover:scale-150 transition-transform"
               onClick={handleClick}
             />
           ))}

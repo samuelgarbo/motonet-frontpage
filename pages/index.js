@@ -15,13 +15,13 @@ export default function Home({ data }) {
     <div>
       <Header />
       <Banner />
-      <main tw="w-full grid grid-cols-5 p-3 pt-6 mb-4">
+      <main tw="w-full grid grid-cols-4 p-3 pt-6 mb-4">
         <section tw="col-span-1 pr-3">
           <CarRegister />
           <VehicleType />
           <CategoryNav data={data} />
         </section>
-        <div tw="grid grid-cols-4 col-span-4 pl-3 gap-x-4">
+        <div tw="grid grid-cols-4 col-span-3 pl-3 gap-x-4">
           <div tw="col-span-4 lg:col-span-2 mb-6">
             <img src={"/Banner1.png"} tw="w-full h-auto  rounded-sm" />
           </div>
