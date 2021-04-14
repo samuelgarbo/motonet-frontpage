@@ -1,7 +1,7 @@
 import tw, { css } from "twin.macro";
 import Image from "next/image";
 
-import { footerData, footerImageText } from "../../data";
+import { footerData, footerImageText } from "../data";
 
 const stylesFooterCol = (notFirst) => [tw`col-span-1`, notFirst && tw`ml-9`];
 
@@ -40,8 +40,10 @@ export default function Footer() {
   });
   return (
     <footer tw="border-t p-4">
-      <div tw="grid grid-cols-5">{footer}</div>
-      <div tw="grid grid-cols-6">{footerImages}</div>
+      <div tw="max-w-6xl mx-auto">
+        <div tw="grid grid-cols-5">{footer}</div>
+        <div tw="grid grid-cols-6">{footerImages}</div>
+      </div>
     </footer>
   );
 }

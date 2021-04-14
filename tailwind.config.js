@@ -58,6 +58,9 @@ module.exports = {
       transitionProperty: {
         maxHeight: "max-height",
       },
+      boxShadow: {
+        banner: "box-shadow: 0px 3px 10px #000",
+      },
     },
   },
   plugins: [],

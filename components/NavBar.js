@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import tw, { css } from "twin.macro";
 
 import MegaMenu from "./MegaMenu";
-import { menuList, navCategories } from "../../data";
+import { menuList, navCategories } from "../data";
 
 const stylesNavBar = ({ selected, first }) => [
   tw`flex items-center text-white text-xs font-semibold uppercase px-3 border-r border-gray-400 hover:bg-white hover:text-gray-800  cursor-pointer`,
