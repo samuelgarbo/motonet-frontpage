@@ -15,7 +15,7 @@ export default function Home({ data }) {
     <div>
       <Header />
       <Banner />
-      <main tw="w-full grid grid-cols-4 p-3 pt-6 mb-4">
+      <main tw="grid grid-cols-4 p-3 pt-4 mb-4 max-w-7xl mx-auto">
         <section tw="col-span-1 pr-3">
           <CarRegister />
           <VehicleType />

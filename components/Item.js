@@ -41,13 +41,13 @@ function Item({ node, main, indentation, openChildState, setOpenChildState }) {
           (node.id === openChildState ? (
             <FontAwesomeIcon
               icon={faMinus}
-              tw="h-3.5 w-3.5 hover:transform hover:scale-150 transition-transform "
+              tw="h-3.5 w-3.5 hover:transform hover:scale-125 transition-transform "
               onClick={handleClose}
             />
           ) : (
             <FontAwesomeIcon
               icon={faPlus}
-              tw="h-3.5 w-3.5 hover:transform hover:scale-150 transition-transform"
+              tw="h-3.5 w-3.5 hover:transform hover:scale-125 transition-transform"
               onClick={handleClick}
             />
           ))}
