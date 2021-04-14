@@ -21,52 +21,55 @@ export default function Home({ data }) {
           <VehicleType />
           <CategoryNav data={data} />
         </section>
-        <div tw="grid grid-cols-4 col-span-3 pl-3 gap-x-4">
-          <div tw="col-span-4 lg:col-span-2 mb-6">
-            <img src={"/Banner1.png"} tw="w-full h-auto  rounded-sm" />
-          </div>
-          <div tw="col-span-4 lg:col-span-2 mb-6">
-            <img src={"/Banner2.png"} tw="w-full h-auto  rounded-sm" />
-          </div>
-          <div tw="col-span-4 lg:col-span-2 mb-6">
-            <img src={"/Ad1.png"} tw="w-full h-auto  rounded-sm" />
-          </div>
-          <div tw="col-span-4 lg:col-span-2 mb-6">
-            <img src={"/Ad1.png"} tw="w-full h-auto  rounded-sm" />
-          </div>
-          <div tw="col-span-4 lg:col-span-2 mb-6">
-            <img src={"/Banner3.png"} tw="w-full h-auto  rounded-sm" />
-          </div>
-          <div tw="col-span-4 lg:col-span-2 mb-6">
-            <img src={"/Banner5.png"} tw="w-full h-auto  rounded-sm" />
-          </div>
-          <div tw="col-span-4">
-            <h1 tw="text-xl font-semibold mb-6">
-              Tervetuloa Motonet-verkkokauppaan!
-            </h1>
-            <p tw="mb-3">
-              Motonetista löydät auton varaosat yli 700 ajoneuvomalliin.
-              Autovaraosien lisäksi saat kaiken tarvitsemasi autoiluun,
-              moottoripyöräilyyn, polkupyöräilyyn, kalastukseen sekä veneilyyn.
-              Valikoimassamme myös kattava valikoima työkaluja ja
-              rakennustarvikkeita.
-            </p>
-            <p tw="mb-3">
-              Tuotteiden haku ja tilaaminen verkkokaupasta on nopeaa ja helppoa.
-              Tuotekortilta näet tuotteiden saatavuuden, hyllypaikan
-              tavarataloissa ja verkkokaupasta.
-            </p>
-            <p tw="mb-3">
-              Voit aloittaa sivustoon tutustumisen sivun yläosan osastovalikosta
-              tai voit valita haluamasi tuoteryhmän sivun vasemmasta reunasta.
-            </p>
-            <h2 tw="text-2xl font-semibold mb-3">Auton varaosat netistä</h2>
-            <p tw="mb-3">
-              Motonet-verkkokaupan kattavista varaosaluetteloista löydät
-              taatusti sopivat ja kestävät varaosat autoihin, moottoripyöriin,
-              mopoautoihin, mönkijöihin sekä perämoottoreihin. Varaosahaku
-              rekisterinumerolla onnistuu tavaratalon palvelutiskillä.
-            </p>
+        <div tw="col-span-3 flex flex-col">
+          <div tw="grid grid-cols-4  pl-3 gap-x-4 gap-y-4">
+            <div tw="col-span-4 lg:col-span-2">
+              <img src={"/Banner1.png"} tw="w-full h-auto  rounded-sm" />
+            </div>
+            <div tw="col-span-4 lg:col-span-2">
+              <img src={"/Banner2.png"} tw="w-full h-auto  rounded-sm" />
+            </div>
+            <div tw="col-span-4 lg:col-span-2">
+              <img src={"/Ad1.png"} tw="w-full h-auto  rounded-sm" />
+            </div>
+            <div tw="col-span-4 lg:col-span-2">
+              <img src={"/Ad1.png"} tw="w-full h-auto  rounded-sm" />
+            </div>
+            <div tw="col-span-4 lg:col-span-2">
+              <img src={"/Banner3.png"} tw="w-full h-auto  rounded-sm" />
+            </div>
+            <div tw="col-span-4 lg:col-span-2">
+              <img src={"/Banner5.png"} tw="w-full h-auto  rounded-sm" />
+            </div>
+            <div tw="col-span-4">
+              <h1 tw="text-xl font-semibold mb-6">
+                Tervetuloa Motonet-verkkokauppaan!
+              </h1>
+              <p tw="mb-3">
+                Motonetista löydät auton varaosat yli 700 ajoneuvomalliin.
+                Autovaraosien lisäksi saat kaiken tarvitsemasi autoiluun,
+                moottoripyöräilyyn, polkupyöräilyyn, kalastukseen sekä
+                veneilyyn. Valikoimassamme myös kattava valikoima työkaluja ja
+                rakennustarvikkeita.
+              </p>
+              <p tw="mb-3">
+                Tuotteiden haku ja tilaaminen verkkokaupasta on nopeaa ja
+                helppoa. Tuotekortilta näet tuotteiden saatavuuden, hyllypaikan
+                tavarataloissa ja verkkokaupasta.
+              </p>
+              <p tw="mb-3">
+                Voit aloittaa sivustoon tutustumisen sivun yläosan
+                osastovalikosta tai voit valita haluamasi tuoteryhmän sivun
+                vasemmasta reunasta.
+              </p>
+              <h2 tw="text-2xl font-semibold mb-3">Auton varaosat netistä</h2>
+              <p tw="mb-3">
+                Motonet-verkkokaupan kattavista varaosaluetteloista löydät
+                taatusti sopivat ja kestävät varaosat autoihin, moottoripyöriin,
+                mopoautoihin, mönkijöihin sekä perämoottoreihin. Varaosahaku
+                rekisterinumerolla onnistuu tavaratalon palvelutiskillä.
+              </p>
+            </div>
           </div>
         </div>
       </main>
