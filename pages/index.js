@@ -22,23 +22,23 @@ export default function Home({ data }) {
           <CategoryNav data={data} />
         </section>
         <div tw="grid grid-cols-4 col-span-4 pl-3 gap-x-4">
-          <div tw="col-span-4 lg:col-span-2">
-            <img src={"/Banner1.png"} tw="w-full h-auto mb-8 rounded-sm" />
+          <div tw="col-span-4 lg:col-span-2 mb-6">
+            <img src={"/Banner1.png"} tw="w-full h-auto  rounded-sm" />
           </div>
-          <div tw="col-span-4 lg:col-span-2">
-            <img src={"/Banner2.png"} tw="w-full h-auto mb-8 rounded-sm" />
+          <div tw="col-span-4 lg:col-span-2 mb-6">
+            <img src={"/Banner2.png"} tw="w-full h-auto  rounded-sm" />
           </div>
-          <div tw="col-span-4 lg:col-span-2">
-            <img src={"/Ad1.png"} tw="w-full h-auto mb-8 rounded-sm" />
+          <div tw="col-span-4 lg:col-span-2 mb-6">
+            <img src={"/Ad1.png"} tw="w-full h-auto  rounded-sm" />
           </div>
-          <div tw="col-span-4 lg:col-span-2">
-            <img src={"/Ad1.png"} tw="w-full h-auto mb-8 rounded-sm" />
+          <div tw="col-span-4 lg:col-span-2 mb-6">
+            <img src={"/Ad1.png"} tw="w-full h-auto  rounded-sm" />
           </div>
-          <div tw="col-span-4 lg:col-span-2">
-            <img src={"/Banner3.png"} tw="w-full h-auto mb-8 rounded-sm" />
+          <div tw="col-span-4 lg:col-span-2 mb-6">
+            <img src={"/Banner3.png"} tw="w-full h-auto  rounded-sm" />
           </div>
-          <div tw="col-span-4 lg:col-span-2">
-            <img src={"/Banner5.png"} tw="w-full h-auto mb-8 rounded-sm" />
+          <div tw="col-span-4 lg:col-span-2 mb-6">
+            <img src={"/Banner5.png"} tw="w-full h-auto  rounded-sm" />
           </div>
           <div tw="col-span-4">
             <h1 tw="text-xl font-semibold mb-6">
